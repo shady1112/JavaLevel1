@@ -1,0 +1,18 @@
+public class TestSeven {
+	public static void main(String[] args) {
+		String[][] a ={{"小张","19","男"},
+				{"小王","21","女"},
+				{"小李","17","男"},
+				{"小红","13","女"}};
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < a[i].length; j++) {
+				if(Integer.parseInt(a[i][1])>18&&a[i][2].equals("女")) {
+					System.out.println(a[i][0]);
+					break;
+					
+					
+				}
+			}
+		}
+	}
+}
