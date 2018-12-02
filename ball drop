@@ -1,0 +1,19 @@
+public class ball {
+
+	public static void main(String[] args) {
+				float a=100;
+				float b=0;
+				float c=0;
+				for (int i =1; i <=10; i++) {
+					b+=a/2*2;
+					a=a/2;
+					c=a/2;
+				}
+				b+=100;
+				System.out.println(b);
+				System.out.println(c);
+			}
+		
+
+	}
+
