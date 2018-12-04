@@ -1,0 +1,39 @@
+public class TestNumber {
+	
+	public static void main(String[] args) {
+		
+		
+		//  2/1    3/2   5/3   8/5 ........第6项分子是多少  分母是多少????	
+		//定义One方法求出接受键盘输入的2个数字，第一个数字作为基数，
+		//第二个数字作为最大位数，返回相加的和（例：
+		//第一个数字是1，第二个数字是5  需要返回的就是 1+11+111+1111+11111）
+		
+		
+		//定义两个变量  
+		int a = 1;   //基数
+		int b = 4;   //长度
+		
+		String str = "";   //空字符串   
+		String gongshi = ""; //公式的变量  拼接
+		int he = 0;  //定义 和变量  接受和
+		
+		for (int i = 1; i <=b; i++) { //循环了几次
+			
+			str +=a;   //  1    11   111
+			
+			gongshi += str+"+";  // 1 + 11 + 111
+			
+			he += Integer.parseInt(str);  //将获取到的  String类型 转成int 计算
+		}
+		
+		
+		System.out.println(str); 
+		
+		System.out.println(gongshi);
+		//1+11+111+1111+     获取的字符串是这个样的，需要截取 然后求和
+		System.out.println(gongshi.substring(0,gongshi.length()-1)+"="+he);
+		
+		
+		
+	}
+}
