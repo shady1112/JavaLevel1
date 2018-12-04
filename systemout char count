@@ -1,0 +1,56 @@
+public class TestZiMu {
+
+	public static void main(String[] args) {
+		
+		/*
+		 * 2.（20）定义Checked方法，参数为字符串，
+		 * 分别统计出字符串中，英文字母、空格、数字和其它字符的个数打印到控制台。
+		 */
+		String str = "你好,Hello abc6666";
+		TestZiMu ts = new TestZiMu();
+		ts.Checked(str);
+		
+	}
+	
+	public void Checked(String str){
+		
+		// ctrl + shift  + x   小写转大写
+		String zimu = "zxcvbnmasdfghjklpoiuytrewqZXCVBNMASDFGHJKLPOIUYTREWQ";
+		String kongge = " ";
+		String shuzi = "0123456789";
+		
+		int zcount = 0;
+		int kcount = 0;
+		int ncount = 0;
+		int qita = 0;
+		
+		
+		for (int i = 0; i < str.length(); i++) {
+			
+			if (zimu.contains(String.valueOf(str.charAt(i)))) {
+				
+				zcount++;
+				
+			}else if(kongge.contains(String.valueOf(str.charAt(i)))){
+				
+				kcount++;
+				
+			}else if(shuzi.contains(String.valueOf(str.charAt(i)))){
+				
+				ncount++;
+				
+			}else{
+				
+				qita++;
+			}
+		}
+		
+		
+		System.out.println("字母的个数:"+zcount);  // 8
+		System.out.println("空格的个数:"+kcount);  //1
+		System.out.println("数字的个数:"+ncount);  //4
+		System.out.println("其他的个数:"+qita);   //3
+		
+		
+	}
+}
