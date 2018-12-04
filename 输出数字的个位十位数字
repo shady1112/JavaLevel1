@@ -1,0 +1,45 @@
+public class TestGeWei {
+
+	public static void main(String[] args) {
+		
+		//1.（10分）定义getNum方法中编写程序，从键盘输入一个 0~999 之间的任意数，
+		//控制台打印数字的个位十位百位。
+		getNum();
+		
+	}
+	public static void getNum(){
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String number = sc.next();
+		
+		
+		if (Integer.parseInt(number)>=0&&Integer.parseInt(number)<=999) {
+			
+			if (number.length()==1) { //输入的数字 是一位数
+				
+				//System.out.println("个位数字是:"+number);
+				System.out.println("个位数字是:"+number.substring(0,1));
+				
+			}else if(number.length()==2){
+				
+				System.out.println("十位数字是:"+number.substring(0,1));
+				System.out.println("个位数:"+number.substring(1,2));
+				
+			}else if(number.length()==3){
+				
+				System.out.println("百位数字是:"+number.substring(0,1));
+				System.out.println("十位数:"+number.substring(1,2));
+				System.out.println("个位数:"+number.substring(2,3));
+			}
+			
+		}else{
+			
+			System.out.println("不再范围之内");
+		}
+		
+		
+		
+		
+	}
+}
